@@ -1,0 +1,33 @@
+{% extends "photo/pbase.html" %}
+
+{% block content %}
+	<style type="text/css">
+		.main { margin-left: 25px; margin-top: 30px; }
+		.time { font-size: 0.8em; margin-top: 2px; }
+		.body { font-size: 1.1em; margin-top: 2px; }
+		.commentlink { text-align: right; }
+		.step-links a { font-size: 0.89em; }
+		.title {
+			font-size: 1.4em; margin-top: 20px; border-bottom: 1px solid #ccc;
+			padding-left: 4px; margin-left: 5px;
+		}
+		.messages { margin-left: 20px; }
+		.pagination { margin-top: 20px; margin-left: -20px; }
+	</style>
+	<div class="main">
+
+		<a href="{{ backurl }}">&lt;&lt; back</a>
+		<!-- Image -->
+		<ul>
+			{% if image.title %}
+				<div class="title">{{ image.title }}</div>
+			{% endif %}
+
+			<ul>
+				<img border="0" alt="" src="{{ media_url }}{{ image.image.name }}" width="900" />
+			</ul>
+		</ul>
+
+	</div>
+
+{% endblock %}
