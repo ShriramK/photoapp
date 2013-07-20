@@ -44,6 +44,7 @@
 				{% if user.is_staff %}
 				<a href="{% url admin:index %}">Admin</a>
 				<a href="{% url admin:photo_image_add %}">Add image</a>
+				<a href="{% url photo.views.search %}">Search</a>
 				{% endif %}
 
 			{% endblock %}
